@@ -1,0 +1,711 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1706161419
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1706161422}
+  - component: {fileID: 1706161420}
+  m_Layer: 0
+  m_Name: SoundManager
+  m_TagString: SoundManager
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1706161422
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1706161419}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.64, y: 2.05, z: 50.92142}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1349961731005758122}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1706161420
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1706161419}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf18001ca7f967b489dda828dd53f395, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - name: Hit
+    clip: {fileID: 8300000, guid: 753bc596ba8d0f945a688214dd3c66d7, type: 3}
+    volume: 0.3
+    pitch: 1
+  - name: Explosion
+    clip: {fileID: 8300000, guid: 6cc1c6790c973d84693d9c3723625491, type: 3}
+    volume: 0.2
+    pitch: 1
+  - name: EnemyExplosion
+    clip: {fileID: 8300000, guid: 097ab0367ec86eb4297b7714912e1a80, type: 3}
+    volume: 0.6
+    pitch: 1
+  - name: DeadVoice
+    clip: {fileID: 8300000, guid: 8019057783b9e8b4981605a73c03a6d5, type: 3}
+    volume: 0.8
+    pitch: 1
+  - name: GameOver
+    clip: {fileID: 8300000, guid: 9a2adb83fb0c8b0448599c04a7ae8a69, type: 3}
+    volume: 1
+    pitch: 1
+  - name: GruntVoice
+    clip: {fileID: 8300000, guid: 41fecb63bc976bc428a805626c8d604e, type: 3}
+    volume: 0.6
+    pitch: 1
+  - name: Landing
+    clip: {fileID: 8300000, guid: 945957c3a83d220458f98bf0a641ddc2, type: 3}
+    volume: 0.2
+    pitch: 1
+  - name: Respawning
+    clip: {fileID: 8300000, guid: e29c8f7d79e6f4243aab71421ecdd264, type: 3}
+    volume: 1
+    pitch: 1
+  - name: ButtonHover
+    clip: {fileID: 8300000, guid: 0d6223ebecd7f7c4a82a251cc5fef8ec, type: 3}
+    volume: 0.5
+    pitch: 1
+  - name: ButtonPress
+    clip: {fileID: 8300000, guid: ad983e57475397d4a9bd099126ea2e2c, type: 3}
+    volume: 1
+    pitch: 1
+  - name: Boss
+    clip: {fileID: 8300000, guid: ca41349670061024782b30172759735e, type: 3}
+    volume: 0.8
+    pitch: 1
+--- !u!1 &1349961731005758124
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1349961731005758122}
+  - component: {fileID: 1349961731005758125}
+  - component: {fileID: 2103184919}
+  - component: {fileID: 2103184918}
+  m_Layer: 0
+  m_Name: GameController
+  m_TagString: GameController
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1349961731005758122
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1349961731005758124}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -6.694377, y: 1.4541944, z: -51.190952}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1706161422}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1349961731005758125
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1349961731005758124}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59ebc6bd429ddf1499878a7dc5621cd2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameOverPanel: {fileID: 0}
+  pausePanel: {fileID: 0}
+  playerInfo: {fileID: 0}
+  player: {fileID: 5660770340935131033, guid: 8ac26680830f1dc4a82094b9e61bec24, type: 3}
+  respawnPlayerPositon: {fileID: 0}
+  maxLives: 2
+  Lives: 2
+  Scores: 0
+--- !u!82 &2103184919
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1349961731005758124}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 223d89081f40a9748af83bf64a6e0640, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 0.102
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!114 &2103184918
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1349961731005758124}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3384a441131eb6842a3fe20d368e6fbb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnPoints:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  nextWave: 0
+  waves:
+  - name: 1
+    enemy: {fileID: 8189709796222449286, guid: 5528487d350c6ef42bd240013db731ba, type: 3}
+    enemyCount: 3
+    alien: {fileID: 1733511431219483968, guid: 2dc0843afdbfd92418f69fa34338ec68, type: 3}
+    alienCount: 0
+    boss: {fileID: 463622814913542380, guid: c8341253ff2c95343adfe362e72c0910, type: 3}
+    bossCount: 0
+    rate: 0.5
+    timeBetween2Enemy: 0
+  - name: 2
+    enemy: {fileID: 8189709796222449286, guid: 5528487d350c6ef42bd240013db731ba, type: 3}
+    enemyCount: 4
+    alien: {fileID: 1733511431219483968, guid: 2dc0843afdbfd92418f69fa34338ec68, type: 3}
+    alienCount: 0
+    boss: {fileID: 463622814913542380, guid: c8341253ff2c95343adfe362e72c0910, type: 3}
+    bossCount: 0
+    rate: 0.5
+    timeBetween2Enemy: 0
+  - name: 3
+    enemy: {fileID: 8189709796222449286, guid: 5528487d350c6ef42bd240013db731ba, type: 3}
+    enemyCount: 3
+    alien: {fileID: 1733511431219483968, guid: 2dc0843afdbfd92418f69fa34338ec68, type: 3}
+    alienCount: 3
+    boss: {fileID: 463622814913542380, guid: c8341253ff2c95343adfe362e72c0910, type: 3}
+    bossCount: 0
+    rate: 0.5
+    timeBetween2Enemy: 0
+  - name: 4
+    enemy: {fileID: 8189709796222449286, guid: 5528487d350c6ef42bd240013db731ba, type: 3}
+    enemyCount: 4
+    alien: {fileID: 1733511431219483968, guid: 2dc0843afdbfd92418f69fa34338ec68, type: 3}
+    alienCount: 4
+    boss: {fileID: 463622814913542380, guid: c8341253ff2c95343adfe362e72c0910, type: 3}
+    bossCount: 0
+    rate: 0.5
+    timeBetween2Enemy: 0
+  - name: 5
+    enemy: {fileID: 8189709796222449286, guid: 5528487d350c6ef42bd240013db731ba, type: 3}
+    enemyCount: 5
+    alien: {fileID: 1733511431219483968, guid: 2dc0843afdbfd92418f69fa34338ec68, type: 3}
+    alienCount: 5
+    boss: {fileID: 463622814913542380, guid: c8341253ff2c95343adfe362e72c0910, type: 3}
+    bossCount: 0
+    rate: 2
+    timeBetween2Enemy: 2
+  - name: 6
+    enemy: {fileID: 8189709796222449286, guid: 5528487d350c6ef42bd240013db731ba, type: 3}
+    enemyCount: 3
+    alien: {fileID: 1733511431219483968, guid: 2dc0843afdbfd92418f69fa34338ec68, type: 3}
+    alienCount: 3
+    boss: {fileID: 463622814913542380, guid: c8341253ff2c95343adfe362e72c0910, type: 3}
+    bossCount: 1
+    rate: 0.8
+    timeBetween2Enemy: 2
+  - name: 7
+    enemy: {fileID: 8189709796222449286, guid: 5528487d350c6ef42bd240013db731ba, type: 3}
+    enemyCount: 6
+    alien: {fileID: 1733511431219483968, guid: 2dc0843afdbfd92418f69fa34338ec68, type: 3}
+    alienCount: 6
+    boss: {fileID: 463622814913542380, guid: c8341253ff2c95343adfe362e72c0910, type: 3}
+    bossCount: 0
+    rate: 0.5
+    timeBetween2Enemy: 2
+  - name: 8
+    enemy: {fileID: 8189709796222449286, guid: 5528487d350c6ef42bd240013db731ba, type: 3}
+    enemyCount: 2
+    alien: {fileID: 1733511431219483968, guid: 2dc0843afdbfd92418f69fa34338ec68, type: 3}
+    alienCount: 8
+    boss: {fileID: 463622814913542380, guid: c8341253ff2c95343adfe362e72c0910, type: 3}
+    bossCount: 0
+    rate: 0.9
+    timeBetween2Enemy: 3
+  - name: 9
+    enemy: {fileID: 8189709796222449286, guid: 5528487d350c6ef42bd240013db731ba, type: 3}
+    enemyCount: 8
+    alien: {fileID: 1733511431219483968, guid: 2dc0843afdbfd92418f69fa34338ec68, type: 3}
+    alienCount: 10
+    boss: {fileID: 463622814913542380, guid: c8341253ff2c95343adfe362e72c0910, type: 3}
+    bossCount: 0
+    rate: 0.5
+    timeBetween2Enemy: 3
+  - name: 10
+    enemy: {fileID: 8189709796222449286, guid: 5528487d350c6ef42bd240013db731ba, type: 3}
+    enemyCount: 6
+    alien: {fileID: 1733511431219483968, guid: 2dc0843afdbfd92418f69fa34338ec68, type: 3}
+    alienCount: 6
+    boss: {fileID: 463622814913542380, guid: c8341253ff2c95343adfe362e72c0910, type: 3}
+    bossCount: 1
+    rate: 1
+    timeBetween2Enemy: 3
+  - name: 11
+    enemy: {fileID: 8189709796222449286, guid: 5528487d350c6ef42bd240013db731ba, type: 3}
+    enemyCount: 7
+    alien: {fileID: 1733511431219483968, guid: 2dc0843afdbfd92418f69fa34338ec68, type: 3}
+    alienCount: 8
+    boss: {fileID: 463622814913542380, guid: c8341253ff2c95343adfe362e72c0910, type: 3}
+    bossCount: 0
+    rate: 0.5
+    timeBetween2Enemy: 2
+  - name: 12
+    enemy: {fileID: 8189709796222449286, guid: 5528487d350c6ef42bd240013db731ba, type: 3}
+    enemyCount: 8
+    alien: {fileID: 1733511431219483968, guid: 2dc0843afdbfd92418f69fa34338ec68, type: 3}
+    alienCount: 8
+    boss: {fileID: 463622814913542380, guid: c8341253ff2c95343adfe362e72c0910, type: 3}
+    bossCount: 0
+    rate: 1
+    timeBetween2Enemy: 2
+  - name: 13
+    enemy: {fileID: 8189709796222449286, guid: 5528487d350c6ef42bd240013db731ba, type: 3}
+    enemyCount: 8
+    alien: {fileID: 1733511431219483968, guid: 2dc0843afdbfd92418f69fa34338ec68, type: 3}
+    alienCount: 9
+    boss: {fileID: 463622814913542380, guid: c8341253ff2c95343adfe362e72c0910, type: 3}
+    bossCount: 0
+    rate: 0.8
+    timeBetween2Enemy: 2
+  - name: 14
+    enemy: {fileID: 8189709796222449286, guid: 5528487d350c6ef42bd240013db731ba, type: 3}
+    enemyCount: 8
+    alien: {fileID: 1733511431219483968, guid: 2dc0843afdbfd92418f69fa34338ec68, type: 3}
+    alienCount: 9
+    boss: {fileID: 463622814913542380, guid: c8341253ff2c95343adfe362e72c0910, type: 3}
+    bossCount: 0
+    rate: 0.7
+    timeBetween2Enemy: 2
+  - name: 15
+    enemy: {fileID: 8189709796222449286, guid: 5528487d350c6ef42bd240013db731ba, type: 3}
+    enemyCount: 10
+    alien: {fileID: 1733511431219483968, guid: 2dc0843afdbfd92418f69fa34338ec68, type: 3}
+    alienCount: 8
+    boss: {fileID: 463622814913542380, guid: c8341253ff2c95343adfe362e72c0910, type: 3}
+    bossCount: 1
+    rate: 1
+    timeBetween2Enemy: 2
+  - name: 16
+    enemy: {fileID: 8189709796222449286, guid: 5528487d350c6ef42bd240013db731ba, type: 3}
+    enemyCount: 10
+    alien: {fileID: 1733511431219483968, guid: 2dc0843afdbfd92418f69fa34338ec68, type: 3}
+    alienCount: 10
+    boss: {fileID: 463622814913542380, guid: c8341253ff2c95343adfe362e72c0910, type: 3}
+    bossCount: 0
+    rate: 0.6
+    timeBetween2Enemy: 2
+  - name: 17
+    enemy: {fileID: 8189709796222449286, guid: 5528487d350c6ef42bd240013db731ba, type: 3}
+    enemyCount: 11
+    alien: {fileID: 1733511431219483968, guid: 2dc0843afdbfd92418f69fa34338ec68, type: 3}
+    alienCount: 10
+    boss: {fileID: 463622814913542380, guid: c8341253ff2c95343adfe362e72c0910, type: 3}
+    bossCount: 0
+    rate: 0.6
+    timeBetween2Enemy: 2
+  - name: 18
+    enemy: {fileID: 8189709796222449286, guid: 5528487d350c6ef42bd240013db731ba, type: 3}
+    enemyCount: 12
+    alien: {fileID: 1733511431219483968, guid: 2dc0843afdbfd92418f69fa34338ec68, type: 3}
+    alienCount: 11
+    boss: {fileID: 463622814913542380, guid: c8341253ff2c95343adfe362e72c0910, type: 3}
+    bossCount: 1
+    rate: 0.6
+    timeBetween2Enemy: 2
+  - name: 19
+    enemy: {fileID: 8189709796222449286, guid: 5528487d350c6ef42bd240013db731ba, type: 3}
+    enemyCount: 12
+    alien: {fileID: 1733511431219483968, guid: 2dc0843afdbfd92418f69fa34338ec68, type: 3}
+    alienCount: 12
+    boss: {fileID: 463622814913542380, guid: c8341253ff2c95343adfe362e72c0910, type: 3}
+    bossCount: 0
+    rate: 0.5
+    timeBetween2Enemy: 3
+  - name: 20
+    enemy: {fileID: 8189709796222449286, guid: 5528487d350c6ef42bd240013db731ba, type: 3}
+    enemyCount: 10
+    alien: {fileID: 1733511431219483968, guid: 2dc0843afdbfd92418f69fa34338ec68, type: 3}
+    alienCount: 10
+    boss: {fileID: 463622814913542380, guid: c8341253ff2c95343adfe362e72c0910, type: 3}
+    bossCount: 2
+    rate: 1
+    timeBetween2Enemy: 3
+  - name: 21
+    enemy: {fileID: 8189709796222449286, guid: 5528487d350c6ef42bd240013db731ba, type: 3}
+    enemyCount: 10
+    alien: {fileID: 1733511431219483968, guid: 2dc0843afdbfd92418f69fa34338ec68, type: 3}
+    alienCount: 10
+    boss: {fileID: 463622814913542380, guid: c8341253ff2c95343adfe362e72c0910, type: 3}
+    bossCount: 0
+    rate: 0.5
+    timeBetween2Enemy: 3
+  - name: 22
+    enemy: {fileID: 8189709796222449286, guid: 5528487d350c6ef42bd240013db731ba, type: 3}
+    enemyCount: 10
+    alien: {fileID: 1733511431219483968, guid: 2dc0843afdbfd92418f69fa34338ec68, type: 3}
+    alienCount: 10
+    boss: {fileID: 463622814913542380, guid: c8341253ff2c95343adfe362e72c0910, type: 3}
+    bossCount: 0
+    rate: 0.5
+    timeBetween2Enemy: 3
+  - name: 23
+    enemy: {fileID: 8189709796222449286, guid: 5528487d350c6ef42bd240013db731ba, type: 3}
+    enemyCount: 12
+    alien: {fileID: 1733511431219483968, guid: 2dc0843afdbfd92418f69fa34338ec68, type: 3}
+    alienCount: 12
+    boss: {fileID: 463622814913542380, guid: c8341253ff2c95343adfe362e72c0910, type: 3}
+    bossCount: 0
+    rate: 0.5
+    timeBetween2Enemy: 3
+  - name: 24
+    enemy: {fileID: 8189709796222449286, guid: 5528487d350c6ef42bd240013db731ba, type: 3}
+    enemyCount: 15
+    alien: {fileID: 1733511431219483968, guid: 2dc0843afdbfd92418f69fa34338ec68, type: 3}
+    alienCount: 10
+    boss: {fileID: 463622814913542380, guid: c8341253ff2c95343adfe362e72c0910, type: 3}
+    bossCount: 0
+    rate: 0.5
+    timeBetween2Enemy: 3
+  - name: 25
+    enemy: {fileID: 8189709796222449286, guid: 5528487d350c6ef42bd240013db731ba, type: 3}
+    enemyCount: 10
+    alien: {fileID: 1733511431219483968, guid: 2dc0843afdbfd92418f69fa34338ec68, type: 3}
+    alienCount: 15
+    boss: {fileID: 463622814913542380, guid: c8341253ff2c95343adfe362e72c0910, type: 3}
+    bossCount: 0
+    rate: 0.5
+    timeBetween2Enemy: 3
+  - name: 26
+    enemy: {fileID: 8189709796222449286, guid: 5528487d350c6ef42bd240013db731ba, type: 3}
+    enemyCount: 10
+    alien: {fileID: 1733511431219483968, guid: 2dc0843afdbfd92418f69fa34338ec68, type: 3}
+    alienCount: 10
+    boss: {fileID: 463622814913542380, guid: c8341253ff2c95343adfe362e72c0910, type: 3}
+    bossCount: 0
+    rate: 2
+    timeBetween2Enemy: 1
+  - name: 27
+    enemy: {fileID: 8189709796222449286, guid: 5528487d350c6ef42bd240013db731ba, type: 3}
+    enemyCount: 13
+    alien: {fileID: 1733511431219483968, guid: 2dc0843afdbfd92418f69fa34338ec68, type: 3}
+    alienCount: 13
+    boss: {fileID: 463622814913542380, guid: c8341253ff2c95343adfe362e72c0910, type: 3}
+    bossCount: 0
+    rate: 1
+    timeBetween2Enemy: 1
+  - name: 28
+    enemy: {fileID: 8189709796222449286, guid: 5528487d350c6ef42bd240013db731ba, type: 3}
+    enemyCount: 15
+    alien: {fileID: 1733511431219483968, guid: 2dc0843afdbfd92418f69fa34338ec68, type: 3}
+    alienCount: 13
+    boss: {fileID: 463622814913542380, guid: c8341253ff2c95343adfe362e72c0910, type: 3}
+    bossCount: 1
+    rate: 0.5
+    timeBetween2Enemy: 3
+  - name: 29
+    enemy: {fileID: 8189709796222449286, guid: 5528487d350c6ef42bd240013db731ba, type: 3}
+    enemyCount: 15
+    alien: {fileID: 1733511431219483968, guid: 2dc0843afdbfd92418f69fa34338ec68, type: 3}
+    alienCount: 15
+    boss: {fileID: 463622814913542380, guid: c8341253ff2c95343adfe362e72c0910, type: 3}
+    bossCount: 0
+    rate: 1
+    timeBetween2Enemy: 3
+  - name: 30
+    enemy: {fileID: 8189709796222449286, guid: 5528487d350c6ef42bd240013db731ba, type: 3}
+    enemyCount: 15
+    alien: {fileID: 1733511431219483968, guid: 2dc0843afdbfd92418f69fa34338ec68, type: 3}
+    alienCount: 15
+    boss: {fileID: 463622814913542380, guid: c8341253ff2c95343adfe362e72c0910, type: 3}
+    bossCount: 3
+    rate: 0.5
+    timeBetween2Enemy: 3
+  - name: 31
+    enemy: {fileID: 8189709796222449286, guid: 5528487d350c6ef42bd240013db731ba, type: 3}
+    enemyCount: 10
+    alien: {fileID: 1733511431219483968, guid: 2dc0843afdbfd92418f69fa34338ec68, type: 3}
+    alienCount: 10
+    boss: {fileID: 463622814913542380, guid: c8341253ff2c95343adfe362e72c0910, type: 3}
+    bossCount: 0
+    rate: 0.5
+    timeBetween2Enemy: 2
+  - name: 32
+    enemy: {fileID: 8189709796222449286, guid: 5528487d350c6ef42bd240013db731ba, type: 3}
+    enemyCount: 15
+    alien: {fileID: 1733511431219483968, guid: 2dc0843afdbfd92418f69fa34338ec68, type: 3}
+    alienCount: 15
+    boss: {fileID: 463622814913542380, guid: c8341253ff2c95343adfe362e72c0910, type: 3}
+    bossCount: 0
+    rate: 0.5
+    timeBetween2Enemy: 2
+  - name: 33
+    enemy: {fileID: 8189709796222449286, guid: 5528487d350c6ef42bd240013db731ba, type: 3}
+    enemyCount: 15
+    alien: {fileID: 1733511431219483968, guid: 2dc0843afdbfd92418f69fa34338ec68, type: 3}
+    alienCount: 15
+    boss: {fileID: 463622814913542380, guid: c8341253ff2c95343adfe362e72c0910, type: 3}
+    bossCount: 2
+    rate: 0.5
+    timeBetween2Enemy: 2
+  - name: 34
+    enemy: {fileID: 8189709796222449286, guid: 5528487d350c6ef42bd240013db731ba, type: 3}
+    enemyCount: 0
+    alien: {fileID: 1733511431219483968, guid: 2dc0843afdbfd92418f69fa34338ec68, type: 3}
+    alienCount: 0
+    boss: {fileID: 463622814913542380, guid: c8341253ff2c95343adfe362e72c0910, type: 3}
+    bossCount: 4
+    rate: 0.5
+    timeBetween2Enemy: 2
+  - name: 35
+    enemy: {fileID: 8189709796222449286, guid: 5528487d350c6ef42bd240013db731ba, type: 3}
+    enemyCount: 15
+    alien: {fileID: 1733511431219483968, guid: 2dc0843afdbfd92418f69fa34338ec68, type: 3}
+    alienCount: 15
+    boss: {fileID: 463622814913542380, guid: c8341253ff2c95343adfe362e72c0910, type: 3}
+    bossCount: 0
+    rate: 2
+    timeBetween2Enemy: 2
+  - name: 36
+    enemy: {fileID: 8189709796222449286, guid: 5528487d350c6ef42bd240013db731ba, type: 3}
+    enemyCount: 15
+    alien: {fileID: 1733511431219483968, guid: 2dc0843afdbfd92418f69fa34338ec68, type: 3}
+    alienCount: 15
+    boss: {fileID: 463622814913542380, guid: c8341253ff2c95343adfe362e72c0910, type: 3}
+    bossCount: 2
+    rate: 0.5
+    timeBetween2Enemy: 2
+  - name: 37
+    enemy: {fileID: 8189709796222449286, guid: 5528487d350c6ef42bd240013db731ba, type: 3}
+    enemyCount: 20
+    alien: {fileID: 1733511431219483968, guid: 2dc0843afdbfd92418f69fa34338ec68, type: 3}
+    alienCount: 0
+    boss: {fileID: 463622814913542380, guid: c8341253ff2c95343adfe362e72c0910, type: 3}
+    bossCount: 0
+    rate: 0.5
+    timeBetween2Enemy: 2
+  - name: 38
+    enemy: {fileID: 8189709796222449286, guid: 5528487d350c6ef42bd240013db731ba, type: 3}
+    enemyCount: 0
+    alien: {fileID: 1733511431219483968, guid: 2dc0843afdbfd92418f69fa34338ec68, type: 3}
+    alienCount: 20
+    boss: {fileID: 463622814913542380, guid: c8341253ff2c95343adfe362e72c0910, type: 3}
+    bossCount: 0
+    rate: 2
+    timeBetween2Enemy: 2
+  - name: 39
+    enemy: {fileID: 8189709796222449286, guid: 5528487d350c6ef42bd240013db731ba, type: 3}
+    enemyCount: 15
+    alien: {fileID: 1733511431219483968, guid: 2dc0843afdbfd92418f69fa34338ec68, type: 3}
+    alienCount: 15
+    boss: {fileID: 463622814913542380, guid: c8341253ff2c95343adfe362e72c0910, type: 3}
+    bossCount: 4
+    rate: 0.5
+    timeBetween2Enemy: 2
+  - name: 40
+    enemy: {fileID: 8189709796222449286, guid: 5528487d350c6ef42bd240013db731ba, type: 3}
+    enemyCount: 5
+    alien: {fileID: 1733511431219483968, guid: 2dc0843afdbfd92418f69fa34338ec68, type: 3}
+    alienCount: 5
+    boss: {fileID: 463622814913542380, guid: c8341253ff2c95343adfe362e72c0910, type: 3}
+    bossCount: 5
+    rate: 0.5
+    timeBetween2Enemy: 2
+  - name: 41
+    enemy: {fileID: 8189709796222449286, guid: 5528487d350c6ef42bd240013db731ba, type: 3}
+    enemyCount: 23
+    alien: {fileID: 1733511431219483968, guid: 2dc0843afdbfd92418f69fa34338ec68, type: 3}
+    alienCount: 0
+    boss: {fileID: 463622814913542380, guid: c8341253ff2c95343adfe362e72c0910, type: 3}
+    bossCount: 0
+    rate: 0.5
+    timeBetween2Enemy: 2
+  - name: 42
+    enemy: {fileID: 8189709796222449286, guid: 5528487d350c6ef42bd240013db731ba, type: 3}
+    enemyCount: 0
+    alien: {fileID: 1733511431219483968, guid: 2dc0843afdbfd92418f69fa34338ec68, type: 3}
+    alienCount: 23
+    boss: {fileID: 463622814913542380, guid: c8341253ff2c95343adfe362e72c0910, type: 3}
+    bossCount: 0
+    rate: 0.5
+    timeBetween2Enemy: 2
+  - name: 43
+    enemy: {fileID: 8189709796222449286, guid: 5528487d350c6ef42bd240013db731ba, type: 3}
+    enemyCount: 20
+    alien: {fileID: 1733511431219483968, guid: 2dc0843afdbfd92418f69fa34338ec68, type: 3}
+    alienCount: 20
+    boss: {fileID: 463622814913542380, guid: c8341253ff2c95343adfe362e72c0910, type: 3}
+    bossCount: 0
+    rate: 0.5
+    timeBetween2Enemy: 2
+  - name: 44
+    enemy: {fileID: 8189709796222449286, guid: 5528487d350c6ef42bd240013db731ba, type: 3}
+    enemyCount: 0
+    alien: {fileID: 1733511431219483968, guid: 2dc0843afdbfd92418f69fa34338ec68, type: 3}
+    alienCount: 25
+    boss: {fileID: 463622814913542380, guid: c8341253ff2c95343adfe362e72c0910, type: 3}
+    bossCount: 1
+    rate: 0.5
+    timeBetween2Enemy: 2
+  - name: 45
+    enemy: {fileID: 8189709796222449286, guid: 5528487d350c6ef42bd240013db731ba, type: 3}
+    enemyCount: 10
+    alien: {fileID: 1733511431219483968, guid: 2dc0843afdbfd92418f69fa34338ec68, type: 3}
+    alienCount: 10
+    boss: {fileID: 463622814913542380, guid: c8341253ff2c95343adfe362e72c0910, type: 3}
+    bossCount: 5
+    rate: 0.5
+    timeBetween2Enemy: 2
+  - name: 46
+    enemy: {fileID: 8189709796222449286, guid: 5528487d350c6ef42bd240013db731ba, type: 3}
+    enemyCount: 30
+    alien: {fileID: 1733511431219483968, guid: 2dc0843afdbfd92418f69fa34338ec68, type: 3}
+    alienCount: 10
+    boss: {fileID: 463622814913542380, guid: c8341253ff2c95343adfe362e72c0910, type: 3}
+    bossCount: 0
+    rate: 0.5
+    timeBetween2Enemy: 2
+  - name: 47
+    enemy: {fileID: 8189709796222449286, guid: 5528487d350c6ef42bd240013db731ba, type: 3}
+    enemyCount: 10
+    alien: {fileID: 1733511431219483968, guid: 2dc0843afdbfd92418f69fa34338ec68, type: 3}
+    alienCount: 30
+    boss: {fileID: 463622814913542380, guid: c8341253ff2c95343adfe362e72c0910, type: 3}
+    bossCount: 0
+    rate: 0.5
+    timeBetween2Enemy: 2
+  - name: 48
+    enemy: {fileID: 8189709796222449286, guid: 5528487d350c6ef42bd240013db731ba, type: 3}
+    enemyCount: 20
+    alien: {fileID: 1733511431219483968, guid: 2dc0843afdbfd92418f69fa34338ec68, type: 3}
+    alienCount: 0
+    boss: {fileID: 463622814913542380, guid: c8341253ff2c95343adfe362e72c0910, type: 3}
+    bossCount: 25
+    rate: 0.5
+    timeBetween2Enemy: 2
+  - name: 49
+    enemy: {fileID: 8189709796222449286, guid: 5528487d350c6ef42bd240013db731ba, type: 3}
+    enemyCount: 23
+    alien: {fileID: 1733511431219483968, guid: 2dc0843afdbfd92418f69fa34338ec68, type: 3}
+    alienCount: 25
+    boss: {fileID: 463622814913542380, guid: c8341253ff2c95343adfe362e72c0910, type: 3}
+    bossCount: 0
+    rate: 0.5
+    timeBetween2Enemy: 2
+  - name: 50
+    enemy: {fileID: 8189709796222449286, guid: 5528487d350c6ef42bd240013db731ba, type: 3}
+    enemyCount: 15
+    alien: {fileID: 1733511431219483968, guid: 2dc0843afdbfd92418f69fa34338ec68, type: 3}
+    alienCount: 15
+    boss: {fileID: 463622814913542380, guid: c8341253ff2c95343adfe362e72c0910, type: 3}
+    bossCount: 5
+    rate: 0.4
+    timeBetween2Enemy: 3
+  timeBetweenWaves: 5
